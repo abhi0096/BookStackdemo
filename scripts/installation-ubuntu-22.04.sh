@@ -61,12 +61,12 @@ function run_pre_install_checks() {
 
 # Fetch domain to use from first provided parameter,
 # Otherwise request the user to input their domain
-function run_prompt_for_domain_if_required() {
-  if [ -z "$DOMAIN" ]
-  then
-    CURRENT_IP=$(hostname -I | cut -d' ' -f1)
-    DOMAIN=$CURRENT_IP
-  fi
+#function run_prompt_for_domain_if_required() {
+  #if [ -z "$DOMAIN" ]
+  #then
+CURRENT_IP=$(hostname -I | cut -d' ' -f1)
+DOMAIN=$CURRENT_IP
+  #fi
   # if [ -z "$DOMAIN" ]
   # then
   #   info_msg ""
@@ -80,7 +80,7 @@ function run_prompt_for_domain_if_required() {
   # then
   #   error_out "A domain must be provided to run this script"
   # fi
-}
+#}
 
 # Install core system packages
 function run_package_installs() {
